@@ -11,7 +11,7 @@ public class DamagaObject : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             UnityEngine.Debug.Log("Player Damaga");
-            Destroy(collision.gameObject);
+            collision.transform.GetComponent<PlayerRespawn>().playerDamaged();
         }
     }
 }
